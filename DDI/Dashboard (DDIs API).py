@@ -186,4 +186,4 @@ def read_process(input_file):
 
 
 if __name__ == '__main__':
-    res = read_process("input.json")
+    res = read_process("inputfile-DDI.json")
