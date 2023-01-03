@@ -1,2 +1,9 @@
-{"Variables":["Gender","Smoking Habit","Organ affected by the familiar cancer","Cancer Stage","Histology","Molecular Markers","PDL1 result"],
-  "Values": ["Male","","","IIA","","",""]}
+{"Input":{"Variables":{
+  "Gender":"Male",
+  "Smoking Habit":"CurrentSmoker",
+  "Organ affected by the familiar cancer": "",
+  "Cancer Stage": "IIA",
+  "Histology": "",
+  "Molecular Markers": "ALK gene/Immunohistochemistry/Positive",
+  "PDL1 result": "PDL1 Positive"
+  }}}
