@@ -10,16 +10,45 @@ The treatment responses are evaluated in four categories: complete therapeutic r
 while partial therapeutic response and disease progression are negative responses. In this particular API, the lung cancer patients are extracted from the P4-LUCAT KG
 based on the selected population from the Input form. For this particular population of lung cancer patients the API will output the following:
 Treatment
-Response 
+Response
 Oncological Drugs
 Non-Oncological Drugs
 Drug-Drug Interactions
 
 # Input
+<html>
+Gender: <input> <br />
+Smoking habit: <input> <br />
+Organ affected by the cancer of a familiar: <input> <br />
+Cancer stage: <input> <br />
+Histology: <input> <br />
+Molecular markers and associated results: <input> <br />
+PDL1 result: <input> <br />
 
 # Output
 
+JSON format:
 
+
+    {
+        "1111529_LCPatient": {
+            "231_Treatment": [
+                {
+                    "Disease_Progression": [
+                        {
+                            "OncologicalDrugs": "Pemetrexed",
+                            "NonOncologicalDrugs": null,
+                            "DDI_Literature": "DB00338_interactsWith_Literature_DB00642",
+                            "DDI_DeductiveSystem": "DB00958_interactsWith_DeductiveSystem_DB00331_excretion",
+                            "DDI_DrugBank": "DB00958_interactsWith_DrugBank_DB00331_excretion"
+                        },
+                        {
+                            "OncologicalDrugs": "Pemetrexed",
+                            "NonOncologicalDrugs": null,
+                            "DDI_Literature": "DB00338_interactsWith_Literature_DB00642",
+                            "DDI_DeductiveSystem": "DB00958_interactsWith_DeductiveSystem_DB00331_serum_concentration",
+                            "DDI_DrugBank": "DB00958_interactsWith_DrugBank_DB00331_excretion"
+                        }]}]}}
 
 
 # 2) Horn Rules API
@@ -31,5 +60,22 @@ and all the computed Metrics associated with this rules.
 
 
 # Input
+<html>
+Gender: <input> <br />
+Smoking habit: <input> <br />
+Organ affected by the cancer of a familiar: <input> <br />
+Cancer stage: <input> <br />
+Histology: <input> <br />
+Molecular markers and associated results: <input> <br />
+PDL1 result: <input> <br />
 
 # Output
+|  |               Variables               | Values |            Metrics             |
+|:-------:|:-------------------------------------:|:------:|:------------------------------:|
+|  |                Gender                 |     | (Head Coverage, [0.026717557]) |
+|  |             Smoking habit             |     |    (PCA Confidence, [1.0])     |
+|  | Organ affected by the familiar cancer |     |                                |
+|  |             Cancer stage              |     |                                |
+|  |               Histology               |     |                                |
+|  |           Molecular markers           |     |                                |
+  
