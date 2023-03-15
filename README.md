@@ -70,12 +70,12 @@ Molecular markers and associated results: <input> <br />
 PDL1 result: <input> <br />
 
 # Output
-|  |               Variables               | Values |            Metrics             |
-|:-------:|:-------------------------------------:|:------:|:------------------------------:|
-|  |                Gender                 |     | (Head Coverage, [0.026717557]) |
-|  |             Smoking habit             |     |    (PCA Confidence, [1.0])     |
-|  | Organ affected by the familiar cancer |     |                                |
-|  |             Cancer stage              |     |                                |
-|  |               Histology               |     |                                |
-|  |           Molecular markers           |     |                                |
+|  |               Variables               | Values  |            Metrics             |
+|:-------:|:----------------------------------------:|:------:|:------------------------------:|
+|  |                Gender                 |   Male  | (Head Coverage, [0.026717557]) |
+|  |             Smoking habit             |         |    (PCA Confidence, [1.0])     |
+|  | Organ affected by the familiar cancer |         |                                |
+|  |             Cancer stage              |  IIIA   |                                |
+|  |               Histology               |         |                                |
+|  |           Molecular markers           |         |                                |
   
