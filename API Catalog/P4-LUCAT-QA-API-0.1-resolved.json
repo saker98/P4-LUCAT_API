@@ -1,0 +1,64 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "defaultTitle",
+    "description": "defaultDescription",
+    "version": "0.1"
+  },
+  "servers": [
+    {
+      "url": "https://labs.tib.eu"
+    }
+  ],
+  "paths": {
+    "/sdm/p4lucat_qa_api/qa_cui_service": {
+      "post": {
+        "description": "Auto generated using Swagger Inspector",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/p4lucat_qa_api_qa_cui_service_body"
+              },
+              "examples": {
+                "0": {
+                  "value": "{\r\n\t\"cuis\":[\r\n\t\t\"C0016967\",\r\n\t\t\"C0028978\",\r\n\t\t\"C0771375\"\r\n\t]\r\n}\r\n"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "default": {
+            "description": "Auto generated using Swagger Inspector"
+          }
+        },
+        "servers": [
+          {
+            "url": "https://labs.tib.eu"
+          }
+        ]
+      },
+      "servers": [
+        {
+          "url": "https://labs.tib.eu"
+        }
+      ]
+    }
+  },
+  "components": {
+    "schemas": {
+      "p4lucat_qa_api_qa_cui_service_body": {
+        "type": "object",
+        "properties": {
+          "cuis": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

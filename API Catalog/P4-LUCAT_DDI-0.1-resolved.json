@@ -1,0 +1,142 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "defaultDescription",
+    "version": "0.1",
+    "title": "defaultTitle"
+  },
+  "paths": {
+    "/sdm/p4_lucat_ddi_rules/DDI": {
+      "post": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json",
+          "text/html"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/Model0"
+            },
+            "x-examples": {
+              "application/json": "{\"Input\":{\"Variables\":{\r\n  \"Gender\":\"Male\",\r\n  \"Smoking Habit\":\"NonSmoker\",\r\n  \"Organ affected by the familiar cancer\": \"\",\r\n  \"Cancer Stage\": \"IA\",\r\n  \"Histology\": \"\",\r\n  \"Molecular Markers\": \"Epidermal Growth Factor Receptor/EGFR T790M Mutation Positive Non-Small Cell Lung Carcinoma\",\r\n  \"PDL1 result\": \"\"\r\n  }}}"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Definition generated from Swagger Inspector",
+            "schema": {
+              "$ref": "#/definitions/Model1"
+            }
+          },
+          "500": {
+            "description": "Definition generated from Swagger Inspector",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Variables": {
+      "properties": {
+        "Gender": {
+          "type": "string"
+        },
+        "Smoking Habit": {
+          "type": "string"
+        },
+        "Organ affected by the familiar cancer": {
+          "type": "string"
+        },
+        "Cancer Stage": {
+          "type": "string"
+        },
+        "Histology": {
+          "type": "string"
+        },
+        "Molecular Markers": {
+          "type": "string"
+        },
+        "PDL1 result": {
+          "type": "string"
+        }
+      }
+    },
+    "Input": {
+      "properties": {
+        "Variables": {
+          "$ref": "#/definitions/Variables"
+        }
+      }
+    },
+    "Model0": {
+      "properties": {
+        "Input": {
+          "$ref": "#/definitions/Input"
+        }
+      }
+    },
+    "Partial_therapeutic_response": {
+      "properties": {
+        "OncologicalDrugs": {
+          "type": "string"
+        },
+        "NonOncologicalDrugs": {
+          "type": "object",
+          "properties": {}
+        },
+        "DDI_Literature": {
+          "type": "string"
+        },
+        "DDI_DeductiveSystem": {
+          "type": "string"
+        },
+        "DDI_DrugBank": {
+          "type": "string"
+        }
+      }
+    },
+    "304_Treatment": {
+      "properties": {
+        "Partial_therapeutic_response": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Partial_therapeutic_response"
+          }
+        }
+      }
+    },
+    "191878_LCPatient": {
+      "properties": {
+        "304_Treatment": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/304_Treatment"
+          }
+        }
+      }
+    },
+    "Array": {
+      "properties": {
+        "191878_LCPatient": {
+          "$ref": "#/definitions/191878_LCPatient"
+        }
+      }
+    },
+    "Model1": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Array"
+      }
+    }
+  }
+}

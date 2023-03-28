@@ -1,0 +1,192 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "defaultTitle",
+    "description": "defaultDescription",
+    "version": "0.1"
+  },
+  "servers": [
+    {
+      "url": "https://labs.tib.eu"
+    }
+  ],
+  "paths": {
+    "/sdm/p4lucat_publication_api/get_publications": {
+      "post": {
+        "description": "Auto generated using Swagger Inspector",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "10"
+          },
+          {
+            "name": "topic",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "lc"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "0"
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "hindex"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/p4lucat_publication_api_get_publications_body"
+              },
+              "examples": {
+                "0": {
+                  "value": "{\r\n\t\"data\":{\r\n   \"comorbidities\":[\r\n  \t\"C0242339\",\r\n  \t\"C0020538\",\r\n  \t\"C0149871\"\r\n   ],\r\n   \"biomarkers\":[\r\n  \t\"C0034802\",\r\n  \t\"C1332080\",\r\n  \t\"C0812281\"\r\n   ],\r\n   \"tumorType\":[\r\n  \t\"C0152013\"\r\n   ],\r\n   \"drugGroups\":[\r\n  \t\"C0002771\",\r\n  \t\"C0003232\"\r\n   ],\r\n   \"drugs\":[\r\n  \t\"C0000979\",\r\n  \t\"C0028978\"\r\n   ],\r\n   \"oncologicalTreatments\":[\r\n  \t\"C0021083\",\r\n  \t\"C3665472\",\r\n  \t\"C3899317\",\r\n  \t\"C0596087\",\r\n  \t\"C0034619\",\r\n  \t\"C0543467\"\r\n   ],\r\n   \"immunotherapyDrugs\":[\r\n  \t\"C3657270\",\r\n  \t\"C3658706\",\r\n  \t\"C1367202\"\r\n   ],\r\n   \"tkiDrugs\":[\r\n  \t\"C1135135\",\r\n  \t\"C2987648\",\r\n  \t\"C4058811\",\r\n  \t\"C1122962\",\r\n  \t\"C3853921\",\r\n  \t\"C3818721\"\r\n   ],\r\n   \"chemotherapyDrugs\":[\r\n  \t\"C0008838\",\r\n  \t\"C4082227\",\r\n  \t\"C0771375\",\r\n  \t\"C0015133\",\r\n  \t\"C0079083\",\r\n  \t\"C0045093\",\r\n  \t\"C0144576\",\r\n  \t\"C0210657\",\r\n  \t\"C0078257\"\r\n   ]\r\n},\r\n\t\"filter\":{\r\n\t\t\"journals\":[],\r\n\t\t\"publication_types\":[],\r\n\t\t\"authors\":[]\r\n\t}\r\n}\r\n\r\n"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "default": {
+            "description": "Auto generated using Swagger Inspector"
+          }
+        },
+        "servers": [
+          {
+            "url": "https://labs.tib.eu"
+          }
+        ]
+      },
+      "servers": [
+        {
+          "url": "https://labs.tib.eu"
+        }
+      ]
+    }
+  },
+  "components": {
+    "schemas": {
+      "sdmp4lucat_publication_apiget_publications_filter": {
+        "type": "object",
+        "properties": {
+          "publication_types": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "journals": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "authors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "sdmp4lucat_publication_apiget_publications_data": {
+        "type": "object",
+        "properties": {
+          "tumorType": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "tkiDrugs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "drugGroups": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "comorbidities": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "drugs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "biomarkers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "immunotherapyDrugs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "chemotherapyDrugs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "oncologicalTreatments": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "p4lucat_publication_api_get_publications_body": {
+        "type": "object",
+        "properties": {
+          "filter": {
+            "$ref": "#/components/schemas/sdmp4lucat_publication_apiget_publications_filter"
+          },
+          "data": {
+            "$ref": "#/components/schemas/sdmp4lucat_publication_apiget_publications_data"
+          }
+        }
+      }
+    }
+  }
+}
